@@ -1,15 +1,18 @@
 <!DOCTYPE html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Final - Front End </title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style-contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <section class = "header">
+    <section class="header">
         <nav>
             <a href="../index.html"> <img src="../images/logo.png"></a>
             <div class="nav-links" id="navLinks">
@@ -23,20 +26,91 @@
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-    <div class="text-box">
-        <h1>Contato</h1>
-
-    </div>
+        <div class="text-box">
+            <h1>Contato</h1>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
     </section>
-<!-------- Java script para o menu em telas pequenas ------->
+    <section class="location">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33807.057655854456!2d-46.63638544282829!3d-23.544899830075593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1667143601259!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section class="contact-us">
+        <div class="contact-row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5> Rua Piraporinha, 1234, Hamlet Business Center</h5>
+                        <p>Sao paulo, SP, Brasil</p>
+                    </span>
+
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5> +55 11 123456789</h5>
+                        <p> Segunda a Sexta, 8:00 - 18:00</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5>mrbank@gmail.com</h5>
+                        <p>Mande seu email para mais informacoes</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <form id="form">
+                    <input type="text" name="Name" placeholder="Digite seu nome" required>
+                    <input type="email" name="Email" placeholder="Digite seu email" required>
+                    <input type="text" name="Subject" placeholder="Assunto" required>
+                    <textarea rows="8" name="Message" placeholder="Mensagem" required></textarea>
+                    <button type="submit" class="hero-btn">Enviar</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <h4>About us</h4>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>All rights reserved to MR Bank&#169; <i class="fa fa-"></i></p>
+    </section>
+    <!-------- Java script para o menu em telas pequenas ------->
     <script>
         var navLinks = document.getElementById("navLinks");
-        function showMenu(){
+        function showMenu() {
             navLinks.style.right = "0";
         }
-        function hideMenu(){
+        function hideMenu() {
             navLinks.style.right = "-200px";
         }
     </script>
+    <!-- ------ Script para o form -------- -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxqdtr4GaWLTqnnzANKSL7cnw5aoZFujhrzXkFq8iOETRusIHFgWD1EF2OVkFfxweXusA/exec';
+        let form = document.querySelector("form");
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let data = new FormData(form);
+            fetch(scriptURL, {method: "POST", body: data})
+                .then(res => res.text())
+                .then(data => {
+                    document.querySelector("#msg").innerHTML = "Mensagem após envio"
+                    document.querySelector("#sub").value = "Mensagem quando termina o envio"});          
+            alert('Email enviado com sucesso');
+        });
+    </script>
 </body>
+
 </html>
