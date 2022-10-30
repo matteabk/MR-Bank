@@ -1,84 +1,87 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-  }
-  .header-invest {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(7, 6, 31, 0.7),rgba(7, 6, 31, 0.7)), url(../images/banner02.png);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-  }
-  nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-  }
-  nav img {
-    width: 150px;
-  }
-  .nav-links{
-    flex: 1;
-    text-align: right;
-  }
-  .nav-links ul li{
-    
-  }
-  .nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-  }
-  .nav-links ul li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background-color: cyan;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-  }
-  .nav-links ul li:hover::after{
-    width: 100%;
-  }
-  .text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  .text-box h1{
-    font-size: 80px;
-  }
-  .text-box p{
-    margin: 10px 0 40px;
-    font-size: 20px;
-    color: #fff;
-  }
-  .hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-  }
-  .hero-btn:hover{
-    border: 1px solid cyan;
-    background: cyan;
-    transition: 1s;
-  }
-  nav .fa{
-    display: none;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.header-invest {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(7, 6, 31, 0.7),rgba(7, 6, 31, 0.7)), url(../images/banner02.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 150px;
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: cyan;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+.text-box{
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1{
+  font-size: 80px;
+}
+.text-box p{
+  margin: 10px 0 40px;
+  font-size: 20px;
+  color: #fff;
+}
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.hero-btn:hover{
+  border: 1px solid cyan;
+  background: cyan;
+  transition: 1s;
+}
+nav .fa{
+  display: none;
+}
   @media(max-width: 700px){
     .text-box h1{
       font-size: 30px;
@@ -87,7 +90,7 @@
       display: block;
     }
     .nav-links{
-      position: absolute;
+      position: fixed;
       background-color: rgba(35, 35, 37, 0.863);
       height: 100vh;
       width: 200px;
@@ -107,6 +110,7 @@
     .nav-links ul{
       padding: 30px;
     }
+    
   }
 
 .investments{
@@ -143,7 +147,7 @@ p{
 }
 .invest-col{
     flex-basis: 35%;
-    background: rgb(29, 33, 53);
+    background: rgb(34, 38, 58);
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 27px 15px;
@@ -158,4 +162,25 @@ p{
     .invest-row{
         flex-direction: column;
     }
+}
+  /* ------ Footer ------- */
+
+  .footer {
+    background-color:  rgba(24, 24, 56, 0.863);
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    color: #fff;
+  }
+
+  .footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  .icons .fa{
+    color: cyan;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
 }
