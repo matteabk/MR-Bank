@@ -118,6 +118,11 @@
   align-items: center;
   box-sizing: border-box;
 }
+.personbox-aboutus:hover{
+  border: 1px solid rgb(0, 110, 255);
+  background: rgb(0, 110, 255);
+  transition: 1.5s; 
+}
 .personbox-aboutus img{
   max-width: 130px;
   max-height: 130px;
