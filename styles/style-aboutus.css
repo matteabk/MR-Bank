@@ -119,9 +119,7 @@
   box-sizing: border-box;
 }
 .personbox-aboutus:hover{
-  border: 1px solid rgb(0, 110, 255);
-  background: rgb(0, 110, 255);
-  transition: 1.5s; 
+  box-shadow: 0 0 20px 0 rgb(0, 110, 255);
 }
 .personbox-aboutus img{
   max-width: 130px;
@@ -140,7 +138,7 @@
   flex-direction: column;
 }
 
-@media(max-width: 700px){
+@media(max-width: 1000px){
   .text-box h1{
     font-size: 30px;
   }

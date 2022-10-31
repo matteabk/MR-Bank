@@ -155,7 +155,7 @@ p{
     transition: 0.5s;
 }
 .invest-col:hover{
-    box-shadow: 0 0 20px 0 rgba(0, 255, 255, 0.20);
+    box-shadow: 0 0 20px 0 rgb(0, 110, 255);
 }
 
 @media(max-width: 700px){

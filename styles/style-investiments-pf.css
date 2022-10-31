@@ -65,9 +65,7 @@
     align-items: center;
   }
   .investiment-box li:hover{
-        border: 1px solid rgb(0, 110, 255);
-        background: rgb(0, 110, 255);
-        transition: 1s;
+    box-shadow: 0 0 20px 0 rgb(0, 110, 255);
   }
   .investiment-box li{
     display: flex;
